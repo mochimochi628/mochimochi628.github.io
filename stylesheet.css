@@ -1,271 +1,244 @@
-* {
-  box-sizing: border-box;
+@charset "utf-8";
+
+html{
+  font-size: 100%;
 }
 
-body {
+body{
+  margin: 0;/*外側余白無し*/
+  padding: 0;/*内側余白無し*/
+  font-family: "Hiragino Kaku Gothic ProN",sans-serif;;
+}
+
+/* --------ヘッダー-------- */
+header{
+  width: 100%;
+  height: 110px;
+  background: #ff8c00;
+}
+.header-line{
+  width: 100%;
+  height: 20px;
+  background: #331c00;
   margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN";
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(top.png);
-  background-size: cover;
-  color: white;
-  text-align: center;
-}
-
-.top-wrapper h1 {
-  opacity: 0.7;
-  font-size: 45px;
-  letter-spacing: 5px;
-}
-
-.top-wrapper p {
-  opacity: 0.7;
-  font-size: 16px;
-  margin-bottom: 40px;
-}
-
-.btn-wrapper {
-  text-align: center;
-}
-
-.btn-wrapper p {
-  margin-bottom: 20px;
-}
-
-.signup {
-  background-color: #239b76;
-}
-
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
-}
-
-.twitter {
-  background-color: #55acee;
-}
-
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-.fa {
-  margin-right: 5px;
-}
-
-header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34,49,52,0.9);
-  position :fixed;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  width: 124px;
-  margin-top: 20px;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-right {
-  float: right;
-  margin-right: -25px;
-}
-
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
-}
-
-.header-right a:hover {
-  background-color: rgba(255,255,255,0.3);
-}
-
-.lesson-wrapper {
-  height: 580px;
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
-  text-align: center;
-}
-
-.heading {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #5f5d60;
-}
-
-.heading h2 {
-  font-weight: normal;
-}
-
-.lesson {
-  float: left;
-  width: 25%;
-}
-
-.lesson-icon {
-  position: relative;
-}
-
-.lesson-icon p {
-  position: absolute;
-  top: 37%;
-  width: 100%;
-  color: white;
-}
-
-.text-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 15px;
   font-size: 13px;
-  color: #b3aeb5;
+  color: #fff;
 }
 
-.heading h3 {
-  font-weight: normal;
+.header-left{
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 100%;/*親要素のheaderの高さ*/
+  padding: 0;
 }
 
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
+.logo{
+  position: absolute;
+  top: 40%;/*親のtopから50%*/
+  left: 40%;/*親のleftから50%*/
+  transform: translateX(-50%) translateY(-50%);/*子要素自身の大きさの半分をマイナス上と左に*/
+  width: 90px;
+  height: 90px;
+  padding: 0;
+}
+
+.header-right{
+  float: right;
+  width: 404px;/*li要素が4つ入る幅*/
+  height: 100%;/*親要素のheaderの高さ*/
+  margin: 0;
+}
+
+.header-right ul{ 
+  list-style: none;/*リストの●は表示しない*/
+  width: 100%;
+  height: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.header-right li{
+  width: 100px;
+  height: 100%;/*親要素のheaderの高さ*/
+  float: left;
+  margin: 0;
+  border-left: 1px solid #fff;
+}
+
+.header-right a{
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+  display: block;
+  line-height: 80px;
   text-align: center;
 }
 
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0px 7px #1a7940;
+.fa-instagram{
+  color:#e1306c;
 }
 
-.message:active {
+main{
+  width: 100%;
+}
+
+.content-title{
   position: relative;
-  top: 7px;
-  box-shadow: none;
+  width: 100%;
+  height: 450px;
+  margin: 0;
+  padding: 0;
+  background-image: url(top.jpg);
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  border-top: 2px solid #fff;
 }
 
-footer img {
-  width: 125px;
+.title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  height: 50%;
 }
 
-footer p {
-  color: #b3aeb5;
-  font-size: 12px;
+.title h1{
+  font-size: 60px;
+  margin-top: 0;
 }
 
-footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
+.title p{
+  line-height: 0.8;
 }
 
-.menu-icon {
-  color: white;
-  float: right;
+.content-menu{
+  width: 100%;
+  height: 1050px;
+  background-color: #ff8c00;
+  border-top: 2px solid #fff;
+}
+.content{
+  margin: 50px 30px;
+  height: 430px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.section{
+  width: 100%;
+  margin: 25px 0;
+  text-align: center;
   font-size: 25px;
-  padding: 21px 0;
-  display: none;
 }
 
-.clear {
-  clear: left;
+.curry-recipe{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 8px;
+  float: left;
+  background-color:#995400;;
 }
 
-@media all and (max-width: 1000px) {
-  .lesson {
-    width: 50%;
-    margin-bottom: 50px;
-  }
-
-  .lesson-wrapper {
-    height: 990px;
-  }
-
-  footer {
-    text-align: center;
-  }
+.curry-recipe img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-60%);
+  width: 270px;
+  height: 230px;
 }
 
-@media all and (max-width: 750px) {
-  .top-wrapper h1 {
-    font-size: 32px;
-  }
-
-  .heading h2 {
-    font-size: 20px;
-  }
+.curry-recipe p{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: #fff;
 }
 
-@media all and (max-width: 670px) {
-  .header-right {
-    display: none;
-  }
+.spice{
+  position: relative;
+  width: 406px;
+  height: 300px;
+  margin: 0 8px;
+  float: left;
+  background-color:#995400;
+}
+  
+.spice img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-60%);
+  width: 376px;
+  height: 230px;
+}
+  
+.spice p{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: #fff;
+}
 
-  .menu-icon {
-    display: block;
-  }
+footer{
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background: #331c00;
+}
 
-  .top-wrapper .btn {
-    width: 100%;
-  }
+.footer{ 
+  position: relative; 
+  top: 40%;
+  width: 800px;
+  height: 15px;
+  margin: auto;
+  padding: 0;
+}
 
-  .twitter {
-    margin-top: 10px;
-  }
+.footer ul{
+  width: 800x;
+  list-style: none;/*リストの●は表示しない*/
+}
+  
+.footer li{
+  width: 150px;
+  float: left;
+  border-left: 1px solid #fff;
+}
 
-  .top-wrapper {
-    text-align: left;
-  }
+.footer li.li-left{
+  border-left: 0;
+}
 
-  .top-wrapper h1 {
-    font-size: 24px;
-  }
+.footer a{
+  text-decoration: none;
+  font-size: 13px;
+  color: #fff;
+  display: block;
+  line-height: 20px;
+  text-align: center;
+}
 
-  .top-wrapper p {
-    font-size: 14px;
-  }
+.copyright{
+  position: relative;
+  top: 50%;
+  width: 400px;
+  margin: auto;
+  padding: 0;
+}
 
-  .lesson {
-    width: 100%;
-  }
-
-  .lesson-wrapper {
-    height: 1700px;
-  }
-
-  .message-wrapper .btn {
-    width: 100%;
-  }
+.copyright p{
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
 }
